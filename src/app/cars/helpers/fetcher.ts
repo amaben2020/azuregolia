@@ -8,7 +8,7 @@ export const fetchCars = async (searchParam?: string) => {
       {
         params: { model: !searchParam ? "camry" : searchParam },
         headers: {
-          // "X-RapidAPI-Key": process.env.RAPID_CAR_API_KEY,
+          "X-RapidAPI-Key": process.env.RAPID_CAR_API_KEY,
           "X-RapidAPI-Host": "cars-by-api-ninjas.p.rapidapi.com",
         },
       },
