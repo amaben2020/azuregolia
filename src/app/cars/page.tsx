@@ -2,7 +2,7 @@ import Link from "next/link";
 import { fetchCars } from "./helpers/fetcher";
 
 const Cars = async () => {
-  const cars = await fetchCars();
+  const cars = await fetchCars("", 12);
   return (
     <div className=" flex">
       {cars?.map((e: TCars) => (
