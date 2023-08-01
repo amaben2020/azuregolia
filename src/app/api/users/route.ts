@@ -1,8 +1,18 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export const GET = async () => {
-  return NextResponse.json({
-    message: "It works",
-    // email,
-  });
+export const POST = async (request: NextRequest) => {
+  console.log(request.body);
+  return NextResponse.json(
+    {
+      message: "It works",
+      // email,
+    },
+    {
+      status: 201,
+      statusText: "Ok Request",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    },
+  );
 };

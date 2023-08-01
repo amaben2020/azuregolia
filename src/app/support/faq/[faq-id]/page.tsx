@@ -1,11 +1,11 @@
-"use client";
+// "use client";
 
-import { useRouter } from "next/navigation";
+// if this file is not a client, you could treat it like an axios function
+const Faq = async () => {
+  const delayLoad = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
-const Faq = () => {
-  const route = useRouter();
+  await delayLoad(3000);
 
-  console.log(route);
   return <div>Dynamic Faq 1</div>;
 };
 
